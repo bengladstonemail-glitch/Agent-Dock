@@ -1,0 +1,47 @@
+{
+  "name": "agent-dock",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "start": "tsx server.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "lint": "tsc --noEmit",
+    "postinstall": "node scripts/postinstall.mjs",
+    "launcher:check": "node scripts/postinstall.mjs --check"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "duck-duck-scrape": "^2.2.7",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "node-notifier": "^12.1.0",
+    "node-pty": "^1.1.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@types/node-notifier": "^8.0.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "vite-plugin-pwa": "^2.0.0"
+  },
+  "description": "A local-first AI coding workspace for Ollama with Agent, bAgent, terminals and optional MCP integrations."
+}

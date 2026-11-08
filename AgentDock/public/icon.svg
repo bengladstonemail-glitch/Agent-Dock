@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="35%" stop-color="#9B72CB" />
+      <stop offset="70%" stop-color="#D96570" />
+      <stop offset="100%" stop-color="#F2A65A" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131318" />
+      <stop offset="100%" stop-color="#1E1F27" />
+    </linearGradient>
+  </defs>
+  <!-- Background with rounded corners for Android icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Outer Glow -->
+  <circle cx="256" cy="256" r="160" fill="url(#geminiGrad)" opacity="0.15" filter="blur(20px)" />
+
+  <!-- Gemini Sparkle 4-pointed Star -->
+  <path d="M 256 64 C 256 168 256 256 360 256 C 256 256 256 344 256 448 C 256 344 256 256 152 256 C 256 256 256 168 256 64 Z" fill="url(#geminiGrad)" />
+  
+  <!-- Inner core highlight -->
+  <circle cx="256" cy="256" r="32" fill="#ffffff" opacity="0.9" />
+  
+  <!-- Small satellite sparkle -->
+  <path d="M 370 110 C 370 135 370 150 395 150 C 370 150 370 165 370 190 C 370 165 370 150 345 150 C 370 150 370 135 370 110 Z" fill="#D96570" opacity="0.85" />
+</svg>

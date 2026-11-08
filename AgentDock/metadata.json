@@ -1,0 +1,6 @@
+{
+  "name": "Agent Dock",
+  "description": "Local-first AI coding workspace powered by Ollama.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

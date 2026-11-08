@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Agent Dock Copilot - Edge Side Panel",
+  "version": "1.2.0",
+  "description": "Microsoft Edge Side Panel Companion for Agent Dock. Permanently docked on the right side: inspect pages, chat with local Ollama, summarize articles, and create files in ~/AgentDock.",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*",
+    "http://localhost:11434/*",
+    "http://127.0.0.1:11434/*",
+    "<all_urls>"
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Agent Dock Copilot Side Panel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
